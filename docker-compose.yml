@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+
+  web:
+    build: .
+    container_name: xav-app
+    image: xav-app
+    expose: 
+      - 80/tcp
+    #depends_on: 
+    #  - mysql
+    environment: 
+      BASE_URL: /
+      VIRTUAL_HOST: xav.localhost
+    #  MYSQL_HOST: xav-mysql
+    #  MYSQL_USER: xav
+    #  MYSQL_PASSWORD: xav
+    #  MYSQL_DATABASE: xav_db
+    networks: 
+      - default
+
+  #mysql:
+  #  image: mysql:5.7
+  #  networks:
+  #    - default
+  #  environment:
+  #    MYSQL_ROOT_PASSWORD: root
+  #    MYSQL_USER: xav
+  #    MYSQL_PASSWORD: xav
+  #    MYSQL_DATABASE: xav_db
+  #  container_name: xav-mysql
+  #  command: --init-file /tmp/database/init.sql
+  #  volumes:
+  #    - ./database/init.sql:/tmp/database/init.sql
+  
+networks:
+  default:
+    external:
+      name: nginx-proxy
