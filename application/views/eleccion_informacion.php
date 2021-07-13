@@ -1,4 +1,5 @@
-<?php $this->load->view('head') ?>   
+<?php $this->load->view('head') ?>  
+        <?php $this->load->view('sonido') ?> 
     <body id='body'>
            
 
@@ -9,7 +10,7 @@
                                 <div class="uk-width-1-1"><h1 style="color:white; font-weight:700;">Plataforma Web enfocada a juegos serios</h1></div>
                                 <div class="uk-width-1-3@l uk-text-right" style="z-index: 999;">
                                     <ul class="uk-list">
-                                        <li><a href="<?php echo base_url()?>" class="list-button uk-button">Volver al menú principal</a></li>
+                                        <li><a href="<?php echo base_url()?>menu_principal" class="list-button uk-button">Volver al menú principal</a></li>
                                     </ul>
                                 </div>
                                 <div class="uk-width-1-3@l uk-padding-large" style="z-index: 999; background-color: rgba(35, 35, 78, 0.541);">

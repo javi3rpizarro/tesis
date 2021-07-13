@@ -11,10 +11,10 @@ class Video extends CI_Controller {
 		$this->load->view('video_informativo');
 	}
 	public function video2(){
-		//video 2
+		$this->load->view('video_mental');
 	}
 	public function video3(){
-		//video 3
+		$this->load->view('video_nutricional');
 	}
 
 
