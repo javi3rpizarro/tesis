@@ -3,36 +3,37 @@ services:
 
   web:
     build: .
-    container_name: juegos_serios-app
-    image: juegos_serios-app
-    expose: 
-      - 80/tcp
-    environment: 
-      VIRTUAL_HOST: juegos-serios.localhost  
+    container_name: juegos-serios-app
+    image: juegos-serios-app
+    expose:
+      - 80
     depends_on: 
-      - db
-    links:
-      - db:mysql
+      - mysql
+    environment: 
+      VIRTUAL_HOST: juegos-serios.localhost
+      MYSQL_HOST: juegos-serios-db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 87760jhua
+      MYSQL_DATABASE: juegos_serios_db
     networks: 
-      - default
-    volumes: 
-      - ./:/var/www/html/
+      - frontend
+      - backend
 
-  db:
+  mysql:
     image: mysql:5.7
     networks:
-      - default
+      - backend
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 1992199500Ja
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 87760jhua
       MYSQL_DATABASE: juegos_serios_db
-    container_name: db
-    command: --init-file /tmp/database/juegos_serios.sql
+    container_name: juegos-serios-db
     volumes:
-      - ./database/juegos_serios.sql:/tmp/database/juegos_serios.sql
-  
+      - ./database/webapp_init.sql:/docker-entrypoint-initdb.d/webapp_init.sql  
+
 networks:
-  default:
+  frontend:
     external:
       name: nginx-proxy
+  backend:
