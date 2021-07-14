@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'db:3306',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'juegos_serios',
+	'password' => '1992199500Ja',
+	'database' => 'juegos_serios_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -92,5 +92,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
+	'port' => 3306,
 	'save_queries' => TRUE
 );

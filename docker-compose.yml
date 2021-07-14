@@ -3,35 +3,34 @@ services:
 
   web:
     build: .
-    container_name: xav-app
-    image: xav-app
+    container_name: juegos_serios-app
+    image: juegos_serios-app
     expose: 
       - 80/tcp
-    #depends_on: 
-    #  - mysql
     environment: 
-      BASE_URL: /
-      VIRTUAL_HOST: xav.localhost
-    #  MYSQL_HOST: xav-mysql
-    #  MYSQL_USER: xav
-    #  MYSQL_PASSWORD: xav
-    #  MYSQL_DATABASE: xav_db
+      VIRTUAL_HOST: juegos-serios.localhost  
+    depends_on: 
+      - db
+    links:
+      - db:mysql
     networks: 
       - default
+    volumes: 
+      - ./:/var/www/html/
 
-  #mysql:
-  #  image: mysql:5.7
-  #  networks:
-  #    - default
-  #  environment:
-  #    MYSQL_ROOT_PASSWORD: root
-  #    MYSQL_USER: xav
-  #    MYSQL_PASSWORD: xav
-  #    MYSQL_DATABASE: xav_db
-  #  container_name: xav-mysql
-  #  command: --init-file /tmp/database/init.sql
-  #  volumes:
-  #    - ./database/init.sql:/tmp/database/init.sql
+  db:
+    image: mysql:5.7
+    networks:
+      - default
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 1992199500Ja
+      MYSQL_DATABASE: juegos_serios_db
+    container_name: db
+    command: --init-file /tmp/database/juegos_serios.sql
+    volumes:
+      - ./database/juegos_serios.sql:/tmp/database/juegos_serios.sql
   
 networks:
   default:

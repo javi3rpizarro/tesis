@@ -31,16 +31,16 @@
                                  <!----------------------------------------------------------------------------------------------------------------------------->
   
                                <svg width="600" height="600" id="entorno">
-        <g id="fondo"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/pikachu.png?raw=true" width="400" height="400" x="200" y="100"></g>
-    <g class="padre" id="0"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/1.png?raw=true" class="movil"></g>
-    <g class="padre" id="1"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/2.png?raw=true" class="movil"></g>
-    <g class="padre" id="2"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/3.png?raw=true" class="movil"></g>
-    <g class="padre" id="3"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/4.png?raw=true" class="movil"></g>
-    <g class="padre" id="4"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/5.png?raw=true" class="movil"></g>
-    <g class="padre" id="5"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/6.png?raw=true" class="movil"></g>
-    <g class="padre" id="6"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/7.png?raw=true" class="movil"></g>
-    <g class="padre" id="7"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/8.png?raw=true" class="movil"></g>
-    <g class="padre" id="8"><image xlink:href="https://github.com/javi3rpizarro/tesis/blob/master/assets/9.png?raw=true" class="movil"></g>
+        <g id="fondo"><image xlink:href="<?php echo base_url()?>assets/pikachu.png" width="400" height="400" x="200" y="100"></g>
+    <g class="padre" id="0"><image xlink:href="<?php echo base_url()?>assets/1pika.png" class="movil"></g>
+    <g class="padre" id="1"><image xlink:href="<?php echo base_url()?>assets/2pika.png" class="movil"></g>
+    <g class="padre" id="2"><image xlink:href="<?php echo base_url()?>assets/3pika.png" class="movil"></g>
+    <g class="padre" id="3"><image xlink:href="<?php echo base_url()?>assets/4pika.png" class="movil"></g>
+    <g class="padre" id="4"><image xlink:href="<?php echo base_url()?>assets/5pika.png" class="movil"></g>
+    <g class="padre" id="5"><image xlink:href="<?php echo base_url()?>assets/6pika.png" class="movil"></g>
+    <g class="padre" id="6"><image xlink:href="<?php echo base_url()?>assets/7pika.png" class="movil"></g>
+    <g class="padre" id="7"><image xlink:href="<?php echo base_url()?>assets/8pika.png" class="movil"></g>
+    <g class="padre" id="8"><image xlink:href="<?php echo base_url()?>assets/9pika.png" class="movil"></g>
 </svg>
 <audio id="win" src="https://github.com/javi3rpizarro/tesis/blob/master/assets/media_win.mp3?raw=true"></audio>
        

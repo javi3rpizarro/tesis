@@ -18,7 +18,9 @@ class Menu extends CI_Controller {
 		//var_dump($usuario);
 		$this->session->rut = $rut;
 		$this->session->nombre=$nombre;
+		$this->session->logeado=true;
 		$this->load->view('menu_principal');
+
 
 	}
 
