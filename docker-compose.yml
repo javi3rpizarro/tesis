@@ -10,7 +10,7 @@ services:
     depends_on: 
       - mysql
     environment: 
-      VIRTUAL_HOST: juegos-serios.localhost
+      VIRTUAL_HOST: juegos-serios.informatica.uv.cl
       MYSQL_HOST: juegos-serios-db
       MYSQL_USER: admin
       MYSQL_PASSWORD: 87760jhua
